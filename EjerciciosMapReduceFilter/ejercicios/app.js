@@ -50,18 +50,20 @@ var MAIN = (function (DATA) {
 
   // Retornar un objeto que contenga solo el nombre y la edad (name y age) del usuario mas grande.
   lib.olderUser = function (age) {
+
+    var acu=0;
     return DATA
     
     .reduce(function(anterior , posterior, indice, vector){
       
-     /* if( anterior == 0) {
-        anterior= posterior.age;     
+      if( acu == 0) {
+        acu= posterior.age;     
        
     }
-    if(anterior < posterior.age && anterior != 0) {
-        anterior= posterior.age;
-      } */
-      return anterior;
+    if(acu < posterior.age && acu != 0) {
+        acu= posterior.age;
+      } 
+      return acu;
     })
 
    
