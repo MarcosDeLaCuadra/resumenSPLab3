@@ -51,13 +51,20 @@ var MAIN = (function (DATA) {
   // Retornar un objeto que contenga solo el nombre y la edad (name y age) del usuario mas grande.
   lib.olderUser = function (age) {
     return DATA
-    .filter(function(user){
-      return user.age > age;
+    
+    .reduce(function(anterior , posterior, indice, vector){
+      
+     /* if( anterior == 0) {
+        anterior= posterior.age;     
+       
+    }
+    if(anterior < posterior.age && anterior != 0) {
+        anterior= posterior.age;
+      } */
+      return anterior;
     })
-    .map(function(user){
-      var asd= [{'name': user.name  , 'age': user.age}];
-      return JSON.stringify(asd);
-    })
+
+   
 
   };
    console.log(lib.olderUser(35,(DATA) ));
