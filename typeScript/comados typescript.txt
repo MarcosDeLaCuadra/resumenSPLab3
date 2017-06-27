@@ -1,0 +1,5 @@
+tsc x.ts -w
+tsc x.ts
+
+instalar typescript
+npm install -g typescript
